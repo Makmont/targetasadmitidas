@@ -11,12 +11,6 @@ namespace targetasadmitidas
             comboBoxEstudios.Items.Add("carrera trunca");
             comboBoxEstudios.Items.Add("Profesional");
 
-            comboBoxEstadoCivil.Items.Add("Soltero(a)");
-            comboBoxEstadoCivil.Items.Add("Casado(a)");
-            comboBoxEstadoCivil.Items.Add("Viudo(a)");
-            comboBoxEstadoCivil.Items.Add("Divorciado(a)");
-            comboBoxEstadoCivil.Items.Add("Unión libre");
-
             comboBox3Casa.Items.Add("SI");
             comboBox3Casa.Items.Add("NO");
 
@@ -29,6 +23,16 @@ namespace targetasadmitidas
             comboBoxAntiguedad.Items.Add("10 años");
 
         }
+        int totalEvaluados = 0;
+        int totalDeclinados = 0;
+        int totalCDMX = 0;
+        int totalForaneos = 0;
+        int cdmxOro = 0;
+        int cdmxPlatinum = 0;
+        int cdmxAmericanExpress = 0;
+        int foraneosOro = 0;
+        int foraneosPlatinum = 0;
+        int foraneosAmericanExpress = 0;
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -42,28 +46,30 @@ namespace targetasadmitidas
 
         private void button1_Click(object sender, EventArgs e)
         {
+
+    
+
+            totalEvaluados++;
+
             string nombre = TextBoxNombre.Text;
             string aspirante = "";
-            string direccion = textBoxDireccion.Text;
-            string delegacion = textBoxDelegacion.Text;
             int edad = int.Parse(textBoxEdad.Text);
             string sexo = "";
-            string puesto = textBoxPuesto.Text;
-            string empresa = textBoxEmpresa.Text;
             string tipoEmpresa = "";
             string estudios = comboBoxEstudios.SelectedItem.ToString();
-            string estadoCivil = comboBoxEstadoCivil.SelectedItem.ToString();
             decimal hijos = numericUpDown1Hijos.Value;
             string casaPropia = comboBox3Casa.SelectedItem.ToString();
-            int valorCasa = int.Parse(textBoxCasa.Text);
             string vehiculos = comboBoxVehiculos.SelectedItem.ToString();
             decimal numVehiculos = numericUpDownVehiculos.Value;
             string antiguedadLaboral = comboBoxAntiguedad.SelectedItem.ToString();
             int salarioMensual = int.Parse(textBoxSalarioMensual.Text);
             int deudas = int.Parse(textBoxDeudas.Text);
-            string infonavit = "";
-            decimal referencias = numericUpDown3Referencias.Value;
             string tipoDeTargeta = "";
+
+
+
+
+
 
             if (opcion1.Checked)
             {
@@ -98,51 +104,54 @@ namespace targetasadmitidas
 
 
 
-            if (radioButton6.Checked)
-            {
-                infonavit = radioButton6.Text;
-            }
-            else if (radioButton5.Checked)
-            {
-                infonavit = radioButton5.Text;
-            }
-
-
-
             if ((tipoEmpresa == "privada" || tipoEmpresa == "publica") && aspirante == "CDMX" && sexo != "" && edad >= 25 && edad <= 50 && salarioMensual >= 12000 && estudios == "carrera trunca" && hijos == 1 && casaPropia == "SI" && deudas <= 5000 && antiguedadLaboral == "3 años")
             {
                 tipoDeTargeta = "Oro para CDMX";
+                cdmxOro++;
+                totalCDMX++;
             }
             else if ((tipoEmpresa == "privada" || tipoEmpresa == "publica") && aspirante == "CDMX" && sexo != "" && edad >= 30 && edad <= 50 && salarioMensual >= 20000 && estudios == "Profesional" && hijos <= 2 && casaPropia == "SI" && deudas <= 10000 && antiguedadLaboral == "3 años")
             {
                 tipoDeTargeta = "Platinum para CDMX";
+                cdmxPlatinum++;
+                totalCDMX++;
             }
-            else if ((tipoEmpresa == "privada" || tipoEmpresa == "publica") && aspirante == "CDMX" && sexo != "" && edad >= 30 && edad <= 50 && salarioMensual >= 30000 && estudios == "Profesional" && hijos <= 4 && casaPropia == "SI" && valorCasa >= 2000000 && deudas <= 20000 && antiguedadLaboral == "8 años" && numVehiculos == 4)
+            else if ((tipoEmpresa == "privada" || tipoEmpresa == "publica") && aspirante == "CDMX" && sexo != "" && edad >= 30 && edad <= 50 && salarioMensual >= 30000 && estudios == "Profesional" && hijos <= 4 && casaPropia == "SI" && deudas <= 20000 && antiguedadLaboral == "8 años" && numVehiculos == 4)
             {
                 tipoDeTargeta = "American Express para CDMX";
+                cdmxAmericanExpress++;
+                totalCDMX++;
             }
             else if (tipoEmpresa == "publica" && aspirante == "Foraneo" && sexo != "" && edad >= 25 && edad <= 50 && salarioMensual >= 12000 && estudios == "carrera trunca" && hijos == 1 && casaPropia == "SI" && deudas <= 5000 && antiguedadLaboral == "3 años")
             {
                 tipoDeTargeta = "Oro para Foráneos";
+                foraneosOro++;
+                totalForaneos++;
             }
             else if (tipoEmpresa == "publica" && aspirante == "Foraneo" && sexo != "" && edad >= 30 && edad <= 50 && salarioMensual >= 20000 && estudios == "Profesional" && hijos <= 2 && casaPropia == "SI" && deudas <= 10000 && antiguedadLaboral == "3 años" && (vehiculos == "1" || vehiculos == "2"))
             {
                 tipoDeTargeta = "Platinum para Foráneos";
+                foraneosPlatinum++;
+                totalForaneos++;
             }
-            else if ((tipoEmpresa == "privada" || tipoEmpresa == "publica") && aspirante == "Foraneo" && sexo != "" && edad >= 30 && edad <= 50 && salarioMensual >= 30000 && estudios == "Profesional" && hijos <= 4 && casaPropia == "SI" && valorCasa >= 2000000 && deudas <= 20000 && antiguedadLaboral == "8 años" && numVehiculos == 4)
+            else if ((tipoEmpresa == "privada" || tipoEmpresa == "publica") && aspirante == "Foraneo" && sexo != "" && edad >= 30 && edad <= 50 && salarioMensual >= 30000 && estudios == "Profesional" && hijos <= 4 && casaPropia == "SI" && deudas <= 20000 && antiguedadLaboral == "8 años" && numVehiculos == 4)
             {
                 tipoDeTargeta = "American Express para Foráneos";
+                foraneosAmericanExpress++;
+                totalForaneos++;
             }
             else
             {
                 tipoDeTargeta = "No apto para ninguna tarjeta";
+                totalDeclinados++;
             }
 
             MessageBox.Show("Tipo de tarjeta asignada: " + tipoDeTargeta, "Asignación de tarjeta", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-
-
         }
+
+
+
+    
         private string cdmx;
         private void radioButton8_CheckedChanged(object sender, EventArgs e)
         {
@@ -187,15 +196,27 @@ namespace targetasadmitidas
         private void buttonLimpiar_Click(object sender, EventArgs e)
         {
             TextBoxNombre.Text = string.Empty;
-            textBoxDireccion.Text = string.Empty;
-            textBoxDelegacion.Text = string.Empty;
             textBoxEdad.Text = string.Empty;
-            textBoxPuesto.Text = string.Empty;
-            textBoxEmpresa.Text = string.Empty;
-            textBoxCasa.Text = string.Empty;
             textBoxSalarioMensual.Text = string.Empty;
             textBoxDeudas.Text = string.Empty;
 
+
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            MessageBox.Show("Total evaluados: " + totalEvaluados +
+      "\nTotal declinados: " + totalDeclinados +
+      "\nClientes CDMX: " + totalCDMX +
+      "\n\tOro para CDMX: " + cdmxOro +
+      "\n\tPlatinum para CDMX: " + cdmxPlatinum +
+      "\n\tAmerican Express para CDMX: " + cdmxAmericanExpress +
+      "\nClientes Foráneos: " + totalForaneos +
+      "\n\tOro para Foráneos: " + foraneosOro +
+      "\n\tPlatinum para Foráneos: " + foraneosPlatinum +
+      "\n\tAmerican Express para Foráneos: " + foraneosAmericanExpress,
+      "Informe de Evaluación", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
-}
+    }
+

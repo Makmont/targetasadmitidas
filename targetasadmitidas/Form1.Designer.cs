@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             TextBoxNombre = new TextBox();
-            textBoxDireccion = new TextBox();
             panel1 = new Panel();
             groupBox4 = new GroupBox();
             radioButton2 = new RadioButton();
@@ -37,9 +36,6 @@
             groupBox3 = new GroupBox();
             opcion2 = new RadioButton();
             opcion1 = new RadioButton();
-            groupBox2 = new GroupBox();
-            radioButton6 = new RadioButton();
-            radioButton5 = new RadioButton();
             groupBox1 = new GroupBox();
             radioButton3 = new RadioButton();
             radioButton4 = new RadioButton();
@@ -47,9 +43,6 @@
             buttonSolicitar = new Button();
             panel2 = new Panel();
             label22 = new Label();
-            label21 = new Label();
-            numericUpDown3Referencias = new NumericUpDown();
-            label20 = new Label();
             label19 = new Label();
             textBoxDeudas = new TextBox();
             label18 = new Label();
@@ -60,34 +53,22 @@
             numericUpDownVehiculos = new NumericUpDown();
             comboBoxVehiculos = new ComboBox();
             label13 = new Label();
-            label14 = new Label();
-            textBoxCasa = new TextBox();
             label12 = new Label();
             comboBox3Casa = new ComboBox();
             label11 = new Label();
             numericUpDown1Hijos = new NumericUpDown();
-            label10 = new Label();
-            comboBoxEstadoCivil = new ComboBox();
             label9 = new Label();
             comboBoxEstudios = new ComboBox();
             label8 = new Label();
-            label7 = new Label();
-            label6 = new Label();
             label5 = new Label();
             label4 = new Label();
-            textBoxPuesto = new TextBox();
-            label3 = new Label();
-            label2 = new Label();
             label1 = new Label();
-            textBoxEmpresa = new TextBox();
             textBoxEdad = new TextBox();
-            textBoxDelegacion = new TextBox();
+            button1 = new Button();
             panel1.SuspendLayout();
             groupBox4.SuspendLayout();
             groupBox3.SuspendLayout();
-            groupBox2.SuspendLayout();
             groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown3Referencias).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDownVehiculos).BeginInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1Hijos).BeginInit();
             SuspendLayout();
@@ -99,27 +80,17 @@
             TextBoxNombre.Size = new Size(462, 27);
             TextBoxNombre.TabIndex = 0;
             // 
-            // textBoxDireccion
-            // 
-            textBoxDireccion.Location = new Point(169, 113);
-            textBoxDireccion.Name = "textBoxDireccion";
-            textBoxDireccion.Size = new Size(462, 27);
-            textBoxDireccion.TabIndex = 1;
-            // 
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(255, 128, 0);
+            panel1.Controls.Add(button1);
             panel1.Controls.Add(groupBox4);
             panel1.Controls.Add(groupBox3);
-            panel1.Controls.Add(groupBox2);
             panel1.Controls.Add(groupBox1);
             panel1.Controls.Add(buttonLimpiar);
             panel1.Controls.Add(buttonSolicitar);
             panel1.Controls.Add(panel2);
             panel1.Controls.Add(label22);
-            panel1.Controls.Add(label21);
-            panel1.Controls.Add(numericUpDown3Referencias);
-            panel1.Controls.Add(label20);
             panel1.Controls.Add(label19);
             panel1.Controls.Add(textBoxDeudas);
             panel1.Controls.Add(label18);
@@ -130,30 +101,18 @@
             panel1.Controls.Add(numericUpDownVehiculos);
             panel1.Controls.Add(comboBoxVehiculos);
             panel1.Controls.Add(label13);
-            panel1.Controls.Add(label14);
-            panel1.Controls.Add(textBoxCasa);
             panel1.Controls.Add(label12);
             panel1.Controls.Add(comboBox3Casa);
             panel1.Controls.Add(label11);
             panel1.Controls.Add(numericUpDown1Hijos);
-            panel1.Controls.Add(label10);
-            panel1.Controls.Add(comboBoxEstadoCivil);
             panel1.Controls.Add(label9);
             panel1.Controls.Add(comboBoxEstudios);
             panel1.Controls.Add(label8);
-            panel1.Controls.Add(label7);
-            panel1.Controls.Add(label6);
             panel1.Controls.Add(label5);
             panel1.Controls.Add(label4);
-            panel1.Controls.Add(textBoxPuesto);
-            panel1.Controls.Add(label3);
-            panel1.Controls.Add(label2);
             panel1.Controls.Add(label1);
-            panel1.Controls.Add(textBoxEmpresa);
             panel1.Controls.Add(textBoxEdad);
-            panel1.Controls.Add(textBoxDelegacion);
             panel1.Controls.Add(TextBoxNombre);
-            panel1.Controls.Add(textBoxDireccion);
             panel1.ForeColor = Color.Transparent;
             panel1.Location = new Point(47, 41);
             panel1.Name = "panel1";
@@ -227,41 +186,6 @@
             opcion1.Text = "CDMX";
             opcion1.UseVisualStyleBackColor = true;
             opcion1.CheckedChanged += radioButton8_CheckedChanged;
-            // 
-            // groupBox2
-            // 
-            groupBox2.BackgroundImageLayout = ImageLayout.Center;
-            groupBox2.Controls.Add(radioButton6);
-            groupBox2.Controls.Add(radioButton5);
-            groupBox2.FlatStyle = FlatStyle.Popup;
-            groupBox2.Location = new Point(925, 86);
-            groupBox2.Name = "groupBox2";
-            groupBox2.Size = new Size(162, 47);
-            groupBox2.TabIndex = 52;
-            groupBox2.TabStop = false;
-            // 
-            // radioButton6
-            // 
-            radioButton6.AutoSize = true;
-            radioButton6.Location = new Point(29, 18);
-            radioButton6.Name = "radioButton6";
-            radioButton6.Size = new Size(42, 24);
-            radioButton6.TabIndex = 41;
-            radioButton6.TabStop = true;
-            radioButton6.Text = "SI";
-            radioButton6.UseVisualStyleBackColor = true;
-            radioButton6.CheckedChanged += radioButton6_CheckedChanged;
-            // 
-            // radioButton5
-            // 
-            radioButton5.AutoSize = true;
-            radioButton5.Location = new Point(89, 17);
-            radioButton5.Name = "radioButton5";
-            radioButton5.Size = new Size(52, 24);
-            radioButton5.TabIndex = 42;
-            radioButton5.TabStop = true;
-            radioButton5.Text = "NO";
-            radioButton5.UseVisualStyleBackColor = true;
             // 
             // groupBox1
             // 
@@ -339,31 +263,6 @@
             label22.Size = new Size(127, 20);
             label22.TabIndex = 48;
             label22.Text = "Tipo de Aspirante";
-            // 
-            // label21
-            // 
-            label21.AutoSize = true;
-            label21.Location = new Point(834, 138);
-            label21.Name = "label21";
-            label21.Size = new Size(85, 20);
-            label21.TabIndex = 45;
-            label21.Text = "Referencias";
-            // 
-            // numericUpDown3Referencias
-            // 
-            numericUpDown3Referencias.Location = new Point(925, 136);
-            numericUpDown3Referencias.Name = "numericUpDown3Referencias";
-            numericUpDown3Referencias.Size = new Size(64, 27);
-            numericUpDown3Referencias.TabIndex = 44;
-            // 
-            // label20
-            // 
-            label20.AutoSize = true;
-            label20.Location = new Point(852, 105);
-            label20.Name = "label20";
-            label20.Size = new Size(67, 20);
-            label20.TabIndex = 43;
-            label20.Text = "Infonavit";
             // 
             // label19
             // 
@@ -447,22 +346,6 @@
             label13.TabIndex = 29;
             label13.Text = "Vehiculos";
             // 
-            // label14
-            // 
-            label14.AutoSize = true;
-            label14.Location = new Point(260, 481);
-            label14.Name = "label14";
-            label14.Size = new Size(161, 20);
-            label14.TabIndex = 28;
-            label14.Text = "Valor de la casa propia";
-            // 
-            // textBoxCasa
-            // 
-            textBoxCasa.Location = new Point(427, 478);
-            textBoxCasa.Name = "textBoxCasa";
-            textBoxCasa.Size = new Size(125, 27);
-            textBoxCasa.TabIndex = 26;
-            // 
             // label12
             // 
             label12.AutoSize = true;
@@ -496,23 +379,6 @@
             numericUpDown1Hijos.Size = new Size(64, 27);
             numericUpDown1Hijos.TabIndex = 22;
             // 
-            // label10
-            // 
-            label10.AutoSize = true;
-            label10.Location = new Point(79, 402);
-            label10.Name = "label10";
-            label10.Size = new Size(84, 20);
-            label10.TabIndex = 21;
-            label10.Text = "Estado civil";
-            // 
-            // comboBoxEstadoCivil
-            // 
-            comboBoxEstadoCivil.FormattingEnabled = true;
-            comboBoxEstadoCivil.Location = new Point(169, 402);
-            comboBoxEstadoCivil.Name = "comboBoxEstadoCivil";
-            comboBoxEstadoCivil.Size = new Size(151, 28);
-            comboBoxEstadoCivil.TabIndex = 20;
-            // 
             // label9
             // 
             label9.AutoSize = true;
@@ -540,24 +406,6 @@
             label8.TabIndex = 17;
             label8.Text = "La empresa es ";
             // 
-            // label7
-            // 
-            label7.AutoSize = true;
-            label7.Location = new Point(6, 288);
-            label7.Name = "label7";
-            label7.Size = new Size(160, 20);
-            label7.TabIndex = 14;
-            label7.Text = "Empresa donde labora";
-            // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Location = new Point(3, 255);
-            label6.Name = "label6";
-            label6.Size = new Size(163, 20);
-            label6.TabIndex = 13;
-            label6.Text = "Puesto que desempeña";
-            // 
             // label5
             // 
             label5.AutoSize = true;
@@ -576,31 +424,6 @@
             label4.TabIndex = 11;
             label4.Text = "Edad";
             // 
-            // textBoxPuesto
-            // 
-            textBoxPuesto.Location = new Point(169, 252);
-            textBoxPuesto.Name = "textBoxPuesto";
-            textBoxPuesto.Size = new Size(462, 27);
-            textBoxPuesto.TabIndex = 10;
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(78, 149);
-            label3.Name = "label3";
-            label3.Size = new Size(85, 20);
-            label3.TabIndex = 9;
-            label3.Text = "Delegacion";
-            // 
-            // label2
-            // 
-            label2.AutoSize = true;
-            label2.Location = new Point(91, 113);
-            label2.Name = "label2";
-            label2.Size = new Size(72, 20);
-            label2.TabIndex = 8;
-            label2.Text = "Direccion";
-            // 
             // label1
             // 
             label1.AutoSize = true;
@@ -610,13 +433,6 @@
             label1.TabIndex = 7;
             label1.Text = "Nombre Completo";
             // 
-            // textBoxEmpresa
-            // 
-            textBoxEmpresa.Location = new Point(169, 285);
-            textBoxEmpresa.Name = "textBoxEmpresa";
-            textBoxEmpresa.Size = new Size(462, 27);
-            textBoxEmpresa.TabIndex = 4;
-            // 
             // textBoxEdad
             // 
             textBoxEdad.Location = new Point(169, 179);
@@ -624,12 +440,15 @@
             textBoxEdad.Size = new Size(125, 27);
             textBoxEdad.TabIndex = 3;
             // 
-            // textBoxDelegacion
+            // button1
             // 
-            textBoxDelegacion.Location = new Point(169, 146);
-            textBoxDelegacion.Name = "textBoxDelegacion";
-            textBoxDelegacion.Size = new Size(300, 27);
-            textBoxDelegacion.TabIndex = 2;
+            button1.Location = new Point(909, 301);
+            button1.Name = "button1";
+            button1.Size = new Size(94, 29);
+            button1.TabIndex = 55;
+            button1.Text = "button1";
+            button1.UseVisualStyleBackColor = true;
+            button1.Click += button1_Click_1;
             // 
             // Form1
             // 
@@ -645,11 +464,8 @@
             groupBox4.PerformLayout();
             groupBox3.ResumeLayout(false);
             groupBox3.PerformLayout();
-            groupBox2.ResumeLayout(false);
-            groupBox2.PerformLayout();
             groupBox1.ResumeLayout(false);
             groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)numericUpDown3Referencias).EndInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDownVehiculos).EndInit();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1Hijos).EndInit();
             ResumeLayout(false);
@@ -658,32 +474,20 @@
         #endregion
 
         private TextBox TextBoxNombre;
-        private TextBox textBoxDireccion;
         private Panel panel1;
-        private TextBox textBoxDelegacion;
-        private Label label3;
-        private Label label2;
         private Label label1;
         private RadioButton radioButton2;
         private RadioButton radioButton1;
-        private TextBox textBoxEmpresa;
         private TextBox textBoxEdad;
-        private Label label7;
-        private Label label6;
         private Label label5;
         private Label label4;
-        private TextBox textBoxPuesto;
         private Label label8;
         private RadioButton radioButton3;
         private RadioButton radioButton4;
         private Label label11;
         private NumericUpDown numericUpDown1Hijos;
-        private Label label10;
-        private ComboBox comboBoxEstadoCivil;
         private Label label9;
         private ComboBox comboBoxEstudios;
-        private Label label14;
-        private TextBox textBoxCasa;
         private Label label12;
         private ComboBox comboBox3Casa;
         private Label label18;
@@ -697,11 +501,6 @@
         private Label label19;
         private TextBox textBoxDeudas;
         private Panel panel2;
-        private Label label20;
-        private RadioButton radioButton5;
-        private RadioButton radioButton6;
-        private Label label21;
-        private NumericUpDown numericUpDown3Referencias;
         private Label label22;
         private RadioButton opcion2;
         private RadioButton opcion1;
@@ -709,7 +508,7 @@
         private Button buttonSolicitar;
         private GroupBox groupBox1;
         private GroupBox groupBox3;
-        private GroupBox groupBox2;
         private GroupBox groupBox4;
+        private Button button1;
     }
 }
